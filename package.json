@@ -1,0 +1,21 @@
+{
+  "name": "lamda-eks",
+  "version": "1.0.0",
+  "description": "Deploy kubernetes app",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "grunt deploy",
+    "test": "grunt invoke"
+  },
+  "author": "Bran",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-aws-lambda": "^0.13.0"
+  },
+  "dependencies": {
+    "@kubernetes/client-node": "^0.6.0",
+    "aws-sdk": "^2.329.0",
+    "js-yaml": "^3.12.0"
+  }
+}

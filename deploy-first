@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: $EKS_DEPLOYMENT_NAME
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: $EKS_DEPLOYMENT_NAME
+    spec:
+      containers:
+      - name: $EKS_DEPLOYMENT_NAME
+        image: $DEPLY_IMAGE
+        ports:
+        - containerPort: 3000

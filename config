@@ -1,0 +1,19 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: $EKS_CA
+    server: $EKS_CLUSTER_HOST
+  name: $EKS_CLUSTER_NAME
+contexts:
+- context:
+    cluster: $EKS_CLUSTER_NAME
+    namespace: default
+    user: $EKS_CLUSTER_USER_NAME
+  name: $EKS_CLUSTER_USER_NAME
+current-context: $EKS_CLUSTER_USER_NAME
+kind: Config
+preferences: {}
+users:
+- name: $EKS_CLUSTER_USER_NAME
+  user:
+    token: $TOKEN
